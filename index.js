@@ -1,4 +1,4 @@
-console.log("bau");
+
 const testimonial = [
   {
     name: "Emily Johnson",
@@ -26,15 +26,16 @@ const usernameEl = document.querySelector(".username");
 let idx = 0;
 updateTestimonial();
 function updateTestimonial() {
-  const { name, photoUrl, text } = testimonials[idx];
+  const { name, photoUrl, text } = testimonial[idx];
   imgEl.src = photoUrl;
   textEl.innerText = text;
   usernameEl.innerText = name;
   idx++;
-  if (idx === testimonials.length) {
+  if (idx === testimonial.length) {
     idx = 0;
   }
   setTimeout(() => {
     updateTestimonial();
   }, 1000);
 }
+
